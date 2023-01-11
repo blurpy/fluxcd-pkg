@@ -184,12 +184,12 @@ func TestAuthOptionsFromData(t *testing.T) {
 			name: "Sets values from Secret",
 			URL:  "https://git@example.com",
 			data: map[string][]byte{
-				"username":    []byte("example"), // This takes precedence over the one from the URL
-				"password":    []byte("secret"),
-				"bearerToken": []byte("token"),
-				"identity":    []byte(privateKeyFixture),
-				"known_hosts": []byte(knownHostsFixture),
-				"caFile":      []byte("mock"),
+				"username":     []byte("example"), // This takes precedence over the one from the URL
+				"password":     []byte("secret"),
+				"bearer_token": []byte("token"),
+				"identity":     []byte(privateKeyFixture),
+				"known_hosts":  []byte(knownHostsFixture),
+				"caFile":       []byte("mock"),
 			},
 
 			wantFunc: func(g *WithT, opts *AuthOptions) {

@@ -89,7 +89,7 @@ func NewAuthOptions(u url.URL, data map[string][]byte) (*AuthOptions, error) {
 	if len(data) > 0 {
 		opts.Username = string(data["username"])
 		opts.Password = string(data["password"])
-		opts.BearerToken = string(data["bearerToken"])
+		opts.BearerToken = string(data["bearer_token"])
 		opts.CAFile = data["caFile"]
 		opts.Identity = data["identity"]
 		opts.KnownHosts = data["known_hosts"]
